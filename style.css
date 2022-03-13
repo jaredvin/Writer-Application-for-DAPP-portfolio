@@ -1,43 +1,102 @@
-body{
-    background-color: #235fd6;
-    font-family: 'Jost',sans-serif;
-    color: #ffff;
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;300;400;700&display=swap');
+
+body {
+  background-color: #f0f5ff;
+  font-family: 'Jost',sans-serif;
+  color: #fff;
 }
 
-.wrapper{ 
-    width: 400px;
-    margin:40px auto;
-    padding:10px;
-    border-radius: 5px;
-    background: white;
-    box-shadow: 0px 10px 40px 0px rgba(43,43,43,.1)
+.wrapper {
+  width: 400px;
+  margin: 40px auto;
+  padding: 10px;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0px 10px 40px 0px rgba(47,47,47,.1);
 }
 
-input[text="text"]{
-    padding: 10px;
-    margin: 10px auto;
-    display: block;
-    border-radius: 5px;
-    border: 1px solid lightgrey;
-    background: none;
-    width: 274px;
-    color: black;
+input[type="text"]{
+  padding: 10px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  background: none;
+  width: 274px;
+  color: black;
 }
 
-input[text="text"]:focus {
-    outline: non;
+input[type="text"]:focus {
+  outline: none;
 }
 
-.controls{
-    width:294px;
-    margin-right: 5px;
+input[type="url"]{
+  padding: 10px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  background: none;
+  width: 274px;
+  color: black;
 }
 
-a{
-    color: black;
-    text-decoration: none;
+input[type="url"]:focus {
+  outline: none;
 }
 
+input[type="date"]{
+  padding: 10px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  background: none;
+  width: 274px;
+  color: black;
+}
+
+input[type="date"]:focus {
+  outline: none;
+}
+
+button[type="submit"]{
+  padding: 10px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 5px;
+  border: 1px solid darkgray;
+  background: none;
+  width: 274px;
+  color: black;
+}
+
+button[type="submit"]:focus {
+  outline: none;
+}
+
+.controls {
+  width: 294px;
+  margin: 15px auto;
+}
+
+#remove_fields {
+  float: right;
+}
+.controls a i.fa-minus {
+  margin-right: 5px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+  font-size: 48px;
+  color: #232c3d;
+}
 h1{
     text-align: center;
     font-size: 48px;
