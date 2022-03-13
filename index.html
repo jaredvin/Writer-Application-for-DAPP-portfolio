@@ -1,127 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This is a decentralized website that helps provide you to add your portforlio">
+  
+  <title>Blockchain @ PSU - DAPP Portfolio Workshop</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <meta name="description" content="This is a decentralized website that helps provide you to add your portforlio">
+  <link rel="stylesheet" type="url/css" href="style.css">
+  <link rel="stylesheet" type="url/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>DAPP Portforlio</title>    
-    
-    <style type="text/css">
-        label{
-            width:110px;
-            display: inline-block;
-        }
-     
-        form{
-            border-radius: 10px;
-            background:grey;
-            color:black;
-            width: 500px;
-            padding:4px
-        }
+  <link rel="stylesheet" type="date/css" href="style.css">
+  <link rel="stylesheet" type="date/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        #submit{
-            width:30%
-        }
+  <link rel="stylesheet" type="submit/css" href="style.css">
+  <link rel="stylesheet" type="submit/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    </style>
 </head>
 
-    <!-- MIGHT USE SOME OF THIS LATER
-    <form name ="frmDataEntry" action="process.html" method="get">
-        
-        <p>Project Title</p>
-        <input type="text" name="txtProjectTitle" id="txtProjectTitle" value="" placeholder="Enter Project Title"
-        maxlength="20"/>
-        <p>Project Description</p>
-        <input type="text"/>
+<body>
+  <h1>Portfolio Workshop</h1>
+  <section class="contactform">
+    <form>
+      <div class="wrapper">
+        <div id="form_options">
+          <input type="text" name="name[]" class="name" size="50" placeholder="Name" value="" id="name">
+          <input type="text" name="project_title[]" class="project_title" size="50" placeholder="Project Title" value="" id="project_title">
+          <input type="date" name="project_date[]" class="project_date" size="50" placeholder="Date" value="" id="project_date">
+          <input type="text" name="project_desc[]" class="project_desc" size="50" placeholder="Project Description" value="" id="project_desc">
+          <input type="url" name="project_link[]" class="project_link" size="50" placeholder="Project Link" value="" id="project_link">
+          <hr/>
+        </div>
+      </div>
+        <div class="controls">
+          <a href="#" id="add_more_fields"><i class="fa fa-plus"></i>Add Another Project</a>
+          <a href="#" id="remove_fields"><i class="fa fa-plus"></i>Remove Project</a>
+        </div>
+      </div>
 
-    </form>    
+    <!--
+      <input name="secret" type="hidden" value="1b3a9374-1a8e-434e-90ab-21aa7b9b80e7"/>
     -->
 
-<body>
+      <script src="script.js"></script>      
+      <input type="submit" placeholder="submit">
 
-    <h1>Portforlio Workshop</h1>
-    <hr/>
-    <p><b>Please fill out the form below.</b></p>
-    <br/><br/>
-
-    <form name="porfolioform" action="results.html" method="POST" enctype="multipart/form-data">
-        <!--Send to server or website
-            Use method="POST" or method="GET"
-        -->
-
-    <div> <!--YEAR-->
-        <label for="freshman">Freshman</label>
-        <input type="radio" name="class" id="freshman" value="freshman">
-    </div>
-    <div> 
-        <label for="sophomore">Sophomore</label>
-        <input type="radio" name="class" id="sophomore" value="sophomore">
-    </div>
-    <div> 
-        <label for="junior">Junior</label>
-        <input type="radio" name="class" id="junior" value="junior">
-    </div>
-    <div> 
-        <label for="senior">Senior</label>
-        <input type="radio" name="class" id="senior" value="senior">
-    </div> 
-    <br/>
-
-    <div> <!--Project Title-->
-        <label for="name">Project Title</label>
-        <input type="text" name="name" id="name" placehoolder="Enter Project Title" required>
-    </div>
-    <br/>
-
-    <div> <!--Project Description           HOW TO DO DESCRIPTION????  --> 
-        <label for="Project Description">Project Description</label>
-        <textarea name="Project Description" id="Project Description" placeholder="Enter Description of Project" rows="4" cols="25"> </textarea>
-    </div> 
-    <br>
-
-    <div> <!--Project Date-->
-        <label for="date">Project Date</label>
-        <input type="date" name="date" id="date" min="2015-01=01">
-    </div>
-
-    <div> <!--Project Link (to GH)-->
-        <label for="url">Project Link to Github</label>
-        <input type="url" name="url"  id="url">
-    </div>
-    <br>
-
-    <div> <!--Image Link or file-->
-        <label>Image</label>
-        <input id="image" type="file" name="image">
-        <br/>
-        <label for="image">or link:</label>
-        <input id="image" type="text" name="image">
-    </div>
-    <br>
-
-   
-    <div> <!--Adds or removes projects-->
-    class="controls">
-    <a href="#" id="add_more_fields"><i class="fa fa-plus"></i>Add Another Project</a>
-    <a href="#" id="remove_fields"><i class ="fa fa-plus"></i>Remove Project</a>
-    </div>
-    <br>    
-
-    <script src="script.js"></script>
-
-
-    <br/>   <br/>
-        <!--Submit button-->
-        <button id="submit" type="submit">Submit</button>
     </form>
-
-    
+  </section>
 </body>
-
 </html>
