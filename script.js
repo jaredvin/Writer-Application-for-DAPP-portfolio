@@ -3,7 +3,7 @@ var add_more_fields = document.getElementById("add_more_fields");
 var remove_fields = document.getElementById("remove_fields");
 
 add_more_fields.onclick = () => {
-    var projectTitle = document.createElement("input");
+    let projectTitle = document.createElement("input");
     projectTitle.setAttribute("type", "text");
     projectTitle.setAttribute("name", "project_title[]");
     projectTitle.setAttribute("class", "project_title");
@@ -13,7 +13,7 @@ add_more_fields.onclick = () => {
     projectTitle.setAttribute("id", "project_title");
     form_options.appendChild(projectTitle);
 
-    var projectDate = document.createElement("input");
+    let projectDate = document.createElement("input");
     projectDate.setAttribute("type", "date");
     projectDate.setAttribute("name", "project_date[]");
     projectDate.setAttribute("class", "project_date");
@@ -23,7 +23,7 @@ add_more_fields.onclick = () => {
     projectDate.setAttribute("id", "project_date");
     form_options.appendChild(projectDate);
 
-    var projectDesc = document.createElement("input");
+    let projectDesc = document.createElement("input");
     projectDesc.setAttribute("type", "text");
     projectDesc.setAttribute("name", "project_desc[]");
     projectDesc.setAttribute("class", "project_desc");
@@ -33,7 +33,7 @@ add_more_fields.onclick = () => {
     projectDesc.setAttribute("id", "project_desc");
     form_options.appendChild(projectDesc);
 
-    var projectLink = document.createElement("input");
+    let projectLink = document.createElement("input");
     projectLink.setAttribute("type", "url");
     projectLink.setAttribute("name", "project_link[]");
     projectLink.setAttribute("class", "project_link");
@@ -45,7 +45,7 @@ add_more_fields.onclick = () => {
 };
 
 remove_fields.onclick = () => {
-    var input_tags = form_options.getElementsByTagName("input");
+    let input_tags = form_options.getElementsByTagName("input");
     if (input_tags.length > 5) {
         form_options.removeChild(input_tags[input_tags.length - 1]);
         form_options.removeChild(input_tags[input_tags.length - 1]);
