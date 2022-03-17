@@ -56,7 +56,7 @@ remove_fields.onclick = () => {
 };
 
 // Button handler for the `Submit Query` button
-function handleFormSubmit(event) {
+submit_button.onclick = () => {
     // Get the form data from the various DOM elements using a DOM selector
     let formData = {};
     let elements = [
@@ -74,4 +74,4 @@ function handleFormSubmit(event) {
     // Send the form data to the server
     // ! TODO: Send to GunJS Cloud, for now it just prints to an alert
     alert(JSON.stringify(formData));
-}
+};
