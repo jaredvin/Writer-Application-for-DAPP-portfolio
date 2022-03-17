@@ -1,6 +1,7 @@
 var form_options = document.getElementById("form_options");
 var add_more_fields = document.getElementById("add_more_fields");
 var remove_fields = document.getElementById("remove_fields");
+var submit_button = document.getElementById("submit");
 
 add_more_fields.onclick = () => {
     let projectTitle = document.createElement("input");
@@ -74,6 +75,3 @@ function handleFormSubmit(event) {
     // ! TODO: Send to GunJS Cloud, for now it just prints to an alert
     alert(JSON.stringify(formData));
 }
-
-const form = document.querySelector(".contact-form");
-form.addEventListener("submit", handleFormSubmit);
